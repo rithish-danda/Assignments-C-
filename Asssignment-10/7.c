@@ -1,20 +1,20 @@
 //a10 07
 #include<stdio.h>
+int fact(int n)
+{
+    int f=1;
+    for(int i=1;i<=n;i++)
+      {
+         f*=i;
+      }
+    return f;
+}
 int ncr(int n,int r)
 {
-    int i,j,k,fact_n=1,fact_r=1,fact_nr=1,ncr_;
-    for(i=1;i<=n;i++)
-      {
-         fact_n*=i;
-      }
-    for(j=1;j<=r;j++)
-      {
-          fact_r*=j;
-      }
-    for(k=1;k<=(n-r);k++)
-      {
-          fact_nr*=k;
-      }
+    int fact_n,fact_r,fact_nr,ncr_;
+    fact_n=fact(n);
+    fact_r=fact(r);
+    fact_nr=fact(n-r);
     ncr_=fact_n/(fact_r*fact_nr);
     return ncr_;
 }
