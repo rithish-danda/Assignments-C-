@@ -13,6 +13,6 @@ int main()
             x++;
         }
     }
-    printf("The sum of first %d natural numbers is %d",n,sum);
+    printf("The sum of first %d even natural numbers is %d",n,sum);
     return 0;
 }
